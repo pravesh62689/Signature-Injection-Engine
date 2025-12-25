@@ -43,8 +43,7 @@ Open the frontend and try:
 
 ## Video Walkthrough (3 min)
 [![Watch the demo]
-
-https://github.com/user-attachments/assets/10dd612b-1c5e-428a-ab74-27ed57c7a685
+https://github.com/user-attachments/assets/68ca947a-81be-46f0-9e34-cc11686069f7
 
 
 
