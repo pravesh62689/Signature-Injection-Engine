@@ -34,6 +34,9 @@ Open the frontend and try:
 - Hit "Burn signature"
 - You will get a signed PDF link back
 
-## Deploy notes
-- Frontend: Vercel (set `VITE_API_URL` to your backend URL)
-- Backend: Render (set env vars from `.env.example`)
+## Live Demo
+- https://signature-injection-engine-khaki.vercel.app/
+
+## Deployments
+- Vercel (Frontend): https://signature-injection-engine-khaki.vercel.app/
+- Render (Backend): https://signature-injection-engine-52bx.onrender.com
