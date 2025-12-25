@@ -135,7 +135,7 @@ export default function FloatingToolbox() {
         dockClass,
         pos.collapsed ? "isCollapsed" : "",
       ].join(" ")}
-      style={{ left: pos.x, bottom: pos.y }}
+      style={{ left: pos.x, top: pos.y }}
     >
       <div
         className="floatToolsHeader"

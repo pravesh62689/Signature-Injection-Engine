@@ -341,13 +341,16 @@ body {
   max-width: none !important;
 }
 
-.pageWrap > div {
+.pageWrap .react-pdf__Page {
   width: max-content;
 }
 
-.overlay {
+.pageWrap > .overlay {
   position: absolute;
   inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+
   pointer-events: auto;
 }
 
@@ -595,4 +598,43 @@ body {
   .floatTools .toolGrid {
     grid-template-columns: 1fr;
   }
+}
+
+.fieldDelete {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: #111827;
+  color: #ffffff;
+  font-weight: 900;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.fieldDelete:hover {
+  transform: scale(1.05);
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid rgba(2, 6, 23, 0.14);
+  background: rgba(255, 255, 255, 0.92);
+  color: rgba(2, 6, 23, 0.9);
+  font-weight: 950;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.iconBtn:hover {
+  border-color: rgba(137, 90, 246, 0.55);
+  transform: translateY(-1px);
 }

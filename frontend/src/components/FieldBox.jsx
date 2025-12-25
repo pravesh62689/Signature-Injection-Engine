@@ -1,6 +1,10 @@
 import React, { useMemo, useState } from "react";
 import { Rnd } from "react-rnd";
 
+function clamp(n, a, b) {
+  return Math.max(a, Math.min(b, n));
+}
+
 function clamp01(n) {
   if (!Number.isFinite(n)) return 0;
   return Math.max(0, Math.min(1, n));
@@ -38,10 +42,11 @@ export default function FieldBox({
   ]);
 
   function commitFromPx({ x, y, w, h }) {
-    const xPct = clamp01(x / pageRect.width);
-    const yPct = clamp01(y / pageRect.height);
     const wPct = clamp01(w / pageRect.width);
     const hPct = clamp01(h / pageRect.height);
+
+    const xPct = clamp(x / pageRect.width, 0, Math.max(0, 1 - wPct));
+    const yPct = clamp(y / pageRect.height, 0, Math.max(0, 1 - hPct));
 
     onChange({
       xPct: +xPct.toFixed(6),
@@ -83,6 +88,7 @@ export default function FieldBox({
   return (
     <Rnd
       bounds="parent"
+      dragAxis="both"
       size={{ width: px.w, height: px.h }}
       position={{ x: px.x, y: px.y }}
       disableDragging={!canEditBox}
@@ -102,11 +108,9 @@ export default function FieldBox({
       }
       onMouseDown={() => {
         onSelect();
-        startEditIfNeeded();
       }}
       onTouchStart={() => {
         onSelect();
-        startEditIfNeeded();
       }}
       onContextMenu={onRightClick}
       onDragStart={canEditBox ? onSelect : undefined}
@@ -124,7 +128,7 @@ export default function FieldBox({
         });
       }}
       style={{ zIndex: selected ? 10 : 5 }}
-      cancel="input, textarea, button, select, label"
+      cancel="textarea, button, select, label"
       minWidth={40}
       minHeight={28}
     >

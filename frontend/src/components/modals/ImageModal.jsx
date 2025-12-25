@@ -81,8 +81,13 @@ export default function ImageModal({ initialDataUrl, onClose, onSave }) {
       <div className="modal">
         <div className="row">
           <div className="title">Image</div>
-          <button className="btn2" onClick={onClose} type="button">
-            Close
+          <button
+            className="iconBtn"
+            onClick={onClose}
+            type="button"
+            aria-label="Close"
+          >
+            ×
           </button>
         </div>
 
@@ -99,7 +104,7 @@ export default function ImageModal({ initialDataUrl, onClose, onSave }) {
             Choose file
           </button>
           <button
-            className="btn2 primaryGhost"
+            className="primaryBtn"
             onClick={save}
             disabled={!dataUrl || loading}
             type="button"

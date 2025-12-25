@@ -112,8 +112,13 @@ export default function SignatureModal({ initialDataUrl, onClose, onSave }) {
       <div className="modal">
         <div className="row">
           <div className="title">Signature</div>
-          <button className="btn2" onClick={onClose} type="button">
-            Close
+          <button
+            className="iconBtn"
+            onClick={onClose}
+            type="button"
+            aria-label="Close"
+          >
+            ×
           </button>
         </div>
 
