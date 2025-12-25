@@ -8,21 +8,9 @@ import { connectDb } from "./db/connectDb.js";
 
 const app = express();
 
-app.set("trust proxy", 1);
-
-const allowedOrigins = String(process.env.CORS_ORIGIN || "")
-  .split(",")
-  .map((s) => s.trim())
-  .filter(Boolean);
-
 app.use(
   cors({
-    origin: (origin, cb) => {
-      if (!origin) return cb(null, true);
-      if (!allowedOrigins.length) return cb(null, true);
-      if (allowedOrigins.includes(origin)) return cb(null, true);
-      return cb(new Error("Not allowed by CORS"));
-    },
+    origin: true,
     credentials: false,
   })
 );
