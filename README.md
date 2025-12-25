@@ -40,3 +40,11 @@ Open the frontend and try:
 ## Deployments
 - Vercel (Frontend): https://signature-injection-engine-khaki.vercel.app/
 - Render (Backend): https://signature-injection-engine-52bx.onrender.com
+
+## Video Walkthrough (3 min)
+[![Watch the demo]
+
+https://github.com/user-attachments/assets/10dd612b-1c5e-428a-ab74-27ed57c7a685
+
+
+
