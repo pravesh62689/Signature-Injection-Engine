@@ -45,5 +45,8 @@ Open the frontend and try:
 [![Watch the demo]
 https://github.com/user-attachments/assets/68ca947a-81be-46f0-9e34-cc11686069f7
 
+## Drive link of Video Walkthrough (3 min)
+https://drive.google.com/file/d/1eUnwy2-NZR1gINlQiDEJ8sLC2uG0h_Cj/view?usp=sharing
+
 
 
